@@ -1,0 +1,26 @@
+#!/bin/sh
+
+run () {
+    # get current tty, ignoring stderr
+    tty=$(fgconsole 2>/dev/null)
+
+    # check for external gpu by comparing number of internal GPUs to number of available GPUs
+    internal_gpus=1 
+    available_gpus=$(lspci | grep -c VGA)
+    if [ $available_gpus -gt $internal_gpus ]
+    then
+        config="-config egpu-primary-igpu-offload.conf" 
+    else
+        config=""
+    fi
+
+    # startx in specific tty, with specified config, redirecting output to log file for silent boot 
+    startx_command="exec startx -- $config vt$tty &> /dev/null"
+
+    eval $startx_command
+}
+
+if [ "$1" = "run" ]
+then
+    run
+fi

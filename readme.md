@@ -5,8 +5,9 @@ The main script xcom checks whether there are more GPUs installed than expected,
 
 ## Setup
 ### Automated
-Tested only on a T470 running Arch with an Aorus Gaming Box and GTX 750ti.
-Simply run setup.sh with elevated permissions for my own personal config, it might work for you.
+Tested only on a T470 running Arch with an Aorus Gaming Box and GTX 750ti, it might work for you.
+* clone repo to ~/programs/xcommander
+* run setup.sh with elevated permissions for my own personal config
 
 ### Manual
 * On my system the default xorg config works fine with the igpu, however you may need to diy this depending on the hardware.

@@ -4,8 +4,8 @@
 cp egpu-primary-igpu-offload.conf /etc/X11/
 
 # add to .bash_profile, uses tty1 and tty2 for xcom by default
-usr=$(logname)
-cat >> $usr/.bash_profile << EOM
+usrhome="$(awk -F: -v v=$(logname) '{if ($1==v) print $6}' /etc/passwd)"
+cat >> "$usrhome/.bash_profile" << EOM
 
 # startx on tty 1/2
 tty=\$(fgconsole 2>/dev/null)

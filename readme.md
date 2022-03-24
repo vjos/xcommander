@@ -1,7 +1,6 @@
 # xcommander
-
-## Description
 Xcom is a small program to check whether there are more GPUs installed than expected, and start X with an eGPU config if necessary.
+It replaces the `startx` command found in typical startup scripts.
 
 ## Setup
 Most systems other than mine will require manual setup.

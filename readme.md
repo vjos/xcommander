@@ -1,5 +1,5 @@
 # xcommander
-Xcom is a small program to check whether there are more GPUs installed than expected, and start X with an eGPU config if necessary.
+Xcom is a small program to adjust Xorg configs based on the number of GPUs installed. The main usecase is for eGPU setups.
 It replaces the `startx` command found in typical startup scripts.
 
 ## Setup

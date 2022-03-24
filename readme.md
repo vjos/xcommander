@@ -8,8 +8,8 @@ The automated setup script has been tested on various laptops running Arch Linux
 For a larger but more maintained alternative, see [egpu-switcher](https://github.com/hertg/egpu-switcher).
 
 ### Manual
-* On my system the default xorg config works fine with the igpu, however you may need to diy this depending on the hardware.
-* If you have more than one gpu built into your system, set the variable in `xcom`
+* On my system the default xorg config works fine with the iGPU, however you may need to diy this depending on the hardware.
+* If you have more than one GPU built into your system, set the variable in `xcom`
 * Move any required xorg config files (eg egpu-primary-igpu-offload.conf) to `/etc/X11/`.
 * Add `~/path/to/xcommander/xcom run` to your `~/.bash_profile` file in place of any pre-existing startx command
 * Reboot
